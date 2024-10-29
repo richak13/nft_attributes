@@ -17,7 +17,7 @@ web3 = Web3(provider)
 assert web3.is_connected(), "Failed to connect to Ethereum provider."
 
 # Initialize contract
-contract = web3.eth.contract(address=contract_address, abi=abi)
+contract = web3.eth.contract(address=bayc_address, abi=abi)
 
 # Function to get Bored Ape NFT information
 def get_ape_info(apeID):
