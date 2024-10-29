@@ -6,7 +6,7 @@ import json
 import time
 
 bayc_address = "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D"
-contract_address = Web3.toChecksumAddress(bayc_address)
+
 
 #You will need the ABI to connect to the contract
 #The file 'abi.json' has the ABI for the bored ape contract
@@ -20,6 +20,7 @@ with open('/home/codio/workspace/abi.json', 'r') as f:
 api_url = "https://mainnet.infura.io/v3/f474620ee28c4a6185ac4f3facbd6cf6"
 provider = HTTPProvider(api_url)
 web3 = Web3(provider)
+contract_address = Web3.toChecksumAddress(bayc_address)
 
 contract = web3.eth.contract(address=contract_address, abi=abi)
 
